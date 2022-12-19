@@ -40,22 +40,28 @@ public class Main {
         Random rdn = new Random();
         int answer = rdn.nextInt(50) + 1;
         int chances = 0;
+        boolean win = false;
 
-
-        while (chances < 6) {
+        while (chances != 5) {
             int guess = scanner.nextInt();
 
             if (guess > answer) {
                 System.out.println("Nope, hint: the answer is lower ;)");
                 chances++;
+                System.out.println("Guess(es): " + chances);
             } else if (guess < answer) {
                 System.out.println("Nope, hint: the answer is higher ;)");
                 chances++;
+                System.out.println("Guess(es): " + chances);
             } else {
                 System.out.println("AYO ! Congrats my boiii, you win! ;)");
+                win = true;
+                break;
             }
-
         }
 
+        if (win == false) {
+            System.out.println("Well you loose :(");
+        }
     }
 }
