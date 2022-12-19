@@ -38,7 +38,7 @@ public class Main {
 
         System.out.println("Guess a number between 1 and 50, you have 5 chances ");
         Random rdn = new Random();
-        int answer = rdn.nextInt(50);
+        int answer = rdn.nextInt(50) + 1;
         int chances = 0;
 
 
